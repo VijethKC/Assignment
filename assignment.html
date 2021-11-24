@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>cd 
+
+<h2>Assignment</h2>
+
+<div>
+    <button id="btn" type='submit'>Load Data</button>
+</div>
+
+<script>
+
+const fetchData = async () => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => response.json())
+        .then(json => json )
+        .catch(err => console.error(err))
+    console.log(res.slice(0,5))
+}
+
+document.getElementById("btn").addEventListener('click', fetchData)
+// fetchData()  If data load required for the page load.
+</script>
+
+</body>
+</html> 
